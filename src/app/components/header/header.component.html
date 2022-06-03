@@ -1,0 +1,12 @@
+<div class="header-container" [class.dark-theme]="checked" [class.light-theme]="!checked">
+  <div routerLinkActive="active"><a routerLink="homePage">Home Page</a></div>
+  <div routerLinkActive="active"><a routerLink="movies">Movies</a></div>
+  <div routerLinkActive="active"><a routerLink="genres">Genres</a></div>
+  <div class="switcher">
+    <label class="switch">
+      <input type="checkbox" [(ngModel)]="checked" (change)="saveToStorage(checked)">
+      <span class="slider round"></span>
+    </label>
+    <p>{{checked? 'disable dark theme': 'enable dark theme'}}</p>
+  </div>
+</div>

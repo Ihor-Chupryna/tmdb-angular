@@ -1,0 +1,5 @@
+<div class="movies-container" [class.dark-theme]="checked" [class.light-theme]="!checked">
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+</div>
+
+
