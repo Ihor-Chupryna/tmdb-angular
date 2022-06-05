@@ -7,23 +7,21 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from "./app-routing.module";
 import {HeaderComponent} from './components/header/header.component';
 import {MainLayoutComponent} from './layouts/main-layout/main-layout.component';
-import {HomePageComponent} from './components/home-page/home-page.component';
 import {GenresComponent} from './components/genres/genres.component';
 import {MainInterceptor} from "./main.interceptor";
-import { MovieCardComponent } from './components/movie-card/movie-card.component';
-import { MovieInfoComponent } from './components/movie-info/movie-info.component';
-import { MoviesListComponent } from './components/movies-list/movies-list.component';
-import { PaginationComponent } from './components/pagination/pagination.component';
-import { GenresListComponent } from './components/genres-list/genres-list.component';
-import { GenreCardComponent } from './components/genre-card/genre-card.component';
-import { UserComponent } from './components/user/user.component';
+import {MovieCardComponent} from './components/movie-card/movie-card.component';
+import {MovieInfoComponent} from './components/movie-info/movie-info.component';
+import {MoviesListComponent} from './components/movies-list/movies-list.component';
+import {PaginationComponent} from './components/pagination/pagination.component';
+import {GenresListComponent} from './components/genres-list/genres-list.component';
+import {GenreCardComponent} from './components/genre-card/genre-card.component';
+import {UserComponent} from './components/user/user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MainLayoutComponent,
-    HomePageComponent,
     GenresComponent,
     MovieCardComponent,
     MovieInfoComponent,
@@ -45,7 +43,6 @@ import { UserComponent } from './components/user/user.component';
       multi: true,
       useClass: MainInterceptor
     },
-
   ],
   bootstrap: [AppComponent]
 })

@@ -15,7 +15,7 @@ export class MainInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-     request = request.clone({
+    request = request.clone({
       setHeaders: {
         Authorization: `Bearer ${this._token}`
       }

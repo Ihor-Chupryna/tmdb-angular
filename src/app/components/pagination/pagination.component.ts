@@ -8,13 +8,12 @@ import {DataService} from "../../services";
   styleUrls: ['./pagination.component.css']
 })
 export class PaginationComponent implements OnInit {
-
-  constructor(private dataService: DataService) {
-  }
-
   page: number = 1;
   totalPages: number = 500;
   checked: boolean
+
+  constructor(private dataService: DataService) {
+  }
 
   ngOnInit(): void {
     this.dataService.switcherStorage.subscribe(value => this.checked = value)
@@ -36,5 +35,4 @@ export class PaginationComponent implements OnInit {
     }
     this.dataService.pageStorage.next(this.page)
   }
-
 }

@@ -20,5 +20,4 @@ export class MovieInfoComponent implements OnInit {
     this.activatedRoute.data.subscribe(({data}) => this.movie = data)
     this.dataService.switcherStorage.subscribe(value => this.checked = value)
   }
-
 }

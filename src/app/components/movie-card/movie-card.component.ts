@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 
 import {IMovie} from "../../interfaces";
 
-
 @Component({
   selector: 'app-movie-card',
   templateUrl: './movie-card.component.html',

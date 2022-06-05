@@ -15,7 +15,6 @@ export class GenresComponent implements OnInit {
   page: number = 1;
   currentPage: number;
   checked: boolean;
-
   id: number;
 
   constructor(private genreService: GenreService,
@@ -36,12 +35,10 @@ export class GenresComponent implements OnInit {
 
   ngDoCheck(): void {
     if (this.page !== this.currentPage) {
-      this.genreService.getMovieByGenre(this.id,this.page).subscribe(value => {
+      this.genreService.getMovieByGenre(this.id, this.page).subscribe(value => {
         this.moviesByGenre = value.results
         this.currentPage = value.page
       })
     }
   }
-
-
 }

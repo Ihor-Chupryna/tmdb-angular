@@ -6,7 +6,8 @@ import {BehaviorSubject} from "rxjs";
 })
 export class DataService {
   switcherStorage = new BehaviorSubject<boolean>(false)
-  pageStorage = new BehaviorSubject<number>( 1)
+  pageStorage = new BehaviorSubject<number>(1)
+
   constructor() {
   }
 }
