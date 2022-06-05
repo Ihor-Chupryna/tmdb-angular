@@ -5,7 +5,7 @@ import {RouterModule, Routes} from "@angular/router";
 import {MainLayoutComponent} from "./layouts/main-layout/main-layout.component";
 import {MoviesListComponent} from "./components/movies-list/movies-list.component";
 import {MovieInfoComponent} from "./components/movie-info/movie-info.component";
-import {MovieResolver} from "./services/relolvers/movie.resolver";
+import {MovieResolver} from "./services";
 import {GenresListComponent} from "./components/genres-list/genres-list.component";
 import {GenresComponent} from "./components/genres/genres.component";
 
