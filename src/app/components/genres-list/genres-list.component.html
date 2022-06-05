@@ -1,0 +1,9 @@
+<div class="main-container" [class.dark-theme]="checked" [class.light-theme]="!checked">
+  <div class="genreList-container">
+    <div *ngFor="let genre of genres" routerLinkActive="active">
+      <a routerLink="{{genre.id}}" [state]="{genre}">{{genre.name}}</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
+<app-pagination></app-pagination>

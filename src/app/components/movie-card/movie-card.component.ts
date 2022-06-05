@@ -9,8 +9,10 @@ import {IMovie} from "../../interfaces";
   styleUrls: ['./movie-card.component.css']
 })
 export class MovieCardComponent implements OnInit {
-@Input()
-  movie: IMovie
+  @Input()
+  movie: IMovie;
+  @Input()
+  checked: boolean;
 
   ngOnInit(): void {
   }

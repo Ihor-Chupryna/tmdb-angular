@@ -1,0 +1,39 @@
+.movies-pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 15px;
+  align-items: center;
+  min-height: 75px;
+  border-radius: 15px;
+  margin-top: 3px;
+}
+
+.movies-pagination h3 {
+  color: snow;
+  font-size: 22px;
+}
+
+.dark-pagination {
+  background: #424b42;
+}
+
+.light-pagination {
+  background: #eaa774;
+}
+
+button {
+  width: 70px;
+  height: 25px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 15px 2px #dfe5df;
+}
+
+.dark-pagination button {
+  display: block;
+  background: darkolivegreen;
+
+}
+
+.light-pagination button {
+  background: tomato;
+}

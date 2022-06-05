@@ -2,24 +2,26 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 65px;
+  min-height: 75px;
+  margin-bottom: 3px;
+  border-radius: 15px;
 }
 
 a {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 45px;
   color: snow;
 }
 
 .active a {
-  color: red;
+  color: tomato;
 }
 
-.dark-theme {
+.dark-header {
   background: #424b42;
 }
 
-.light-theme {
+.light-header {
   background: #eaa774;
 }
 
@@ -30,10 +32,9 @@ a {
 }
 
 .switcher p {
-  font-size: 11px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
-  /*color: #1976d2;*/
   color: snow;
 }
 
@@ -41,8 +42,8 @@ a {
 .switch {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 17px;
+  width: 40px;
+  height: 25px;
 }
 
 .switch input {
@@ -64,8 +65,8 @@ a {
 .slider:before {
   position: absolute;
   content: "";
-  height: 13px;
-  width: 13px;
+  height: 21px;
+  width: 21px;
   left: 2px;
   bottom: 2px;
   background-color: white;
@@ -82,9 +83,9 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(13px);
-  -ms-transform: translateX(13px);
-  transform: translateX(13px);
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
 }
 
 .slider.round {

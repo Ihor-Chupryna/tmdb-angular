@@ -13,6 +13,10 @@ import {MainInterceptor} from "./main.interceptor";
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { MovieInfoComponent } from './components/movie-info/movie-info.component';
 import { MoviesListComponent } from './components/movies-list/movies-list.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { GenresListComponent } from './components/genres-list/genres-list.component';
+import { GenreCardComponent } from './components/genre-card/genre-card.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { MoviesListComponent } from './components/movies-list/movies-list.compon
     GenresComponent,
     MovieCardComponent,
     MovieInfoComponent,
-    MoviesListComponent
+    MoviesListComponent,
+    PaginationComponent,
+    GenresListComponent,
+    GenreCardComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {IMovieInfo} from "../../interfaces";
+import {DataService} from "../../services";
 
 @Component({
   selector: 'app-movie-info',
@@ -10,12 +11,14 @@ import {IMovieInfo} from "../../interfaces";
 })
 export class MovieInfoComponent implements OnInit {
   movie: IMovieInfo;
+  checked: boolean;
 
-  constructor(private activatedRoute: ActivatedRoute) {
+  constructor(private activatedRoute: ActivatedRoute, private dataService: DataService) {
   }
 
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({data}) => this.movie = data)
+    this.dataService.switcherStorage.subscribe(value => this.checked = value)
   }
 
 }

@@ -1,5 +1,29 @@
-<div>
-  <h1>{{movie.title}}</h1>
+<div class="movie-info" [class.movieInfo-dark]="checked" [class.movieInfo-light]="!checked">
+  <div class="info-container">
+    <div>
+      <h1>{{movie.title}}</h1>
+      <h2>{{movie.tagline}}</h2>
+      <p>- {{movie.overview}}</p>
+      <div class="genre">
+        <span>genres:</span>
+        <h2 *ngFor="let genre of movie.genres"> {{genre.name}}</h2></div>
+      <p><span>budget: </span>{{movie.budget}}</p>
+      <span>homepage: <a href="{{movie.homepage}}">{{movie.homepage}}</a></span>
+      <div class="company">
+        <span>companies:</span>
+        <h2 *ngFor="let company of movie.production_companies">{{company.name}} {{company.origin_country}}</h2>
+      </div>
+      <p><span>release date: </span>{{movie.release_date}}</p>
+    </div>
+    <div class="backdrop"><img src="https://image.tmdb.org/t/p/original{{movie.backdrop_path}}" alt="Backdrop picture">
+      <div><a routerLink="/movies">
+        <button>back</button>
+      </a></div>
+    </div>
+
+
+  </div>
 
 
 </div>
+

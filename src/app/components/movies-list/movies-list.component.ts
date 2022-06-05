@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 import {DataService, MovieService} from "../../services";
 import {IMovie} from "../../interfaces";
@@ -9,14 +9,30 @@ import {IMovie} from "../../interfaces";
   styleUrls: ['./movies-list.component.css']
 })
 export class MoviesListComponent implements OnInit {
-  movies:IMovie[]
-  page = 3
+  movies: IMovie[];
+  page: number;
+  currentPage: number;
   checked: boolean;
-  constructor(private movieService:MovieService, private dataService:DataService) { }
+
+  constructor(private movieService: MovieService, private dataService: DataService) {
+  }
 
   ngOnInit(): void {
-    this.movieService.getAll(this.page.toString()).subscribe(value => this.movies =value.results)
+    this.movieService.getAll(this.page).subscribe(value => {
+      this.movies = value.results
+      this.currentPage = value.page
+    })
     this.dataService.switcherStorage.subscribe(value => this.checked = value)
+    this.dataService.pageStorage.subscribe(value => this.page = value)
+  }
+
+  ngDoCheck(): void {
+    if (this.page !== this.currentPage) {
+      this.movieService.getAll(this.page).subscribe(value => {
+        this.movies = value.results
+        this.currentPage = value.page
+      })
+    }
   }
 
 }

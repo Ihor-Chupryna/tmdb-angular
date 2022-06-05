@@ -1,5 +1,6 @@
 <div class="movies-container" [class.dark-theme]="checked" [class.light-theme]="!checked">
-  <app-movie-card *ngFor="let movie of movies" [movie]="movie"></app-movie-card>
+  <app-movie-card *ngFor="let movie of movies" [movie]="movie" [checked]="checked"></app-movie-card>
 </div>
+<app-pagination></app-pagination>
 
 

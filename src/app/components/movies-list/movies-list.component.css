@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   column-gap: 15px;
   justify-content: center;
+  height: 83vh;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  overflow-y: scroll;
 }
 
 .dark-theme {
@@ -12,4 +17,5 @@
 .light-theme {
   background: #ffdcc4;
 }
+
 

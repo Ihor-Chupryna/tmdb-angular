@@ -2,6 +2,7 @@ import {IGenre} from "./genre.interface";
 
 export interface IMovieInfo {
   id: number;
+  backdrop_path: string;
   budget: number;
   genres: IGenre[];
   homepage: string;

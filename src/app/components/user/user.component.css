@@ -1,0 +1,11 @@
+.user-name {
+  border-radius: 10px;
+  border: 1px solid snow;
+  padding: 1px 3px 4px;
+}
+
+.user-name span {
+  color: snow;
+  display: block;
+  font-size: 30px;
+}

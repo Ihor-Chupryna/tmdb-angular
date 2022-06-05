@@ -1,8 +1,37 @@
-.movie-container {
-    width: 150px;
+.movie-card {
+  width: 170px;
+  box-sizing: border-box;
+  border-radius: 7px;
 }
 
-.movie-container img {
-  width: 150px;
+.movie-card img {
+  width: 95%;
+  margin: 2.5%;
+  border-radius: 7px;
 }
+
+.movie-card h3 {
+  text-align: center;
+}
+
+span {
+  color: black;
+  font-size: 18px;
+  font-style: italic;
+}
+
+h2 {
+  color: coral;
+  margin-left: 60px;
+}
+
+.dark-card img {
+  box-shadow: 10px 10px 3px 4px #424b42;
+}
+
+.light-card img {
+  box-shadow: 10px 10px 3px 4px #eaa774;
+}
+
+
 
