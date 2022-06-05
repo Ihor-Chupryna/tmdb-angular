@@ -20,6 +20,5 @@ export class MovieResolver implements Resolve<IMovieInfo> {
     const {id} = route.params;
     return this.movieService.getById(id);
   }
-
 }
 
