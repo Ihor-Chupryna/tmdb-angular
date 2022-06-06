@@ -1,6 +1,7 @@
 .movie-info {
   height: 90vh;
   border-radius: 15px;
+  overflow-y:scroll ;
 }
 
 .info-container {
